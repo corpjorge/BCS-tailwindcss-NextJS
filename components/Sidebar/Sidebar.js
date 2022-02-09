@@ -7,20 +7,19 @@ export default function Sidebar() {
   const router = useRouter();
   return (
     <>
-      <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-blue-500 z-50 flex flex-wrap items-center justify-between relative md:w-64 py-4 px-6">
+      <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-blue z-50 flex flex-wrap items-center justify-between relative md:w-64 py-4 px-6">
         <div className="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
           <button
-            className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
+            className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none  rounded border border-solid border-transparent"
             type="button"
           >
-            <i className="fas fa-bars" />
           </button>
           <Link href="/">
             <a
               href="#"
-              className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
+              className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0 text-white"
             >
-              BCS logo
+             <img src={'logo.png'} />
             </a>
           </Link>
           <div
@@ -35,7 +34,7 @@ export default function Sidebar() {
                 <Link href="/">
                   <a
                     href="#"
-                    className="text-xs uppercase py-3 font-bold block text-lightBlue-500 hover:text-lightBlue-600"
+                    className="text-xs uppercase py-3 font-bold block text-lightBlue-500 hover:text-lightBlue-600 text-white"
                   >
                     Dashboard
                   </a>
@@ -45,8 +44,7 @@ export default function Sidebar() {
                 <Link href="/">
                   <a
                     href="#"
-                    className="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
-                  >
+                    className="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500 text-white">
                     Button
                   </a>
                 </Link>
@@ -56,13 +54,7 @@ export default function Sidebar() {
                 <Link href="/tables">
                   <a
                     href="#"
-                    className={
-                      "text-xs uppercase py-3 font-bold block " +
-                      (router.pathname.indexOf("/admin/tables") !== -1
-                        ? "text-lightBlue-500 hover:text-lightBlue-600"
-                        : "text-blueGray-700 hover:text-blueGray-500")
-                    }
-                  >
+                    className="text-xs uppercase py-3 font-bold block text-white">
                     Tables
                   </a>
                 </Link>
@@ -72,7 +64,7 @@ export default function Sidebar() {
                 <Link href="/Otros">
                   <a
                     href="#"
-                    className="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
+                    className="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500 text-white"
                   >
                     Otros
                   </a>
